@@ -6,7 +6,8 @@ import { ArrowIcon } from './ArrowIcon';
 import { BrandIcon } from './BrandIcon';
 
 const phone = (content.brand as { phoneE164: string | null }).phoneE164;
-const phoneDigits = phone?.replace(/\D/g, '') ?? null;
+const parsedPhoneDigits = phone?.replace(/\D/g, '') ?? null;
+const phoneDigits = parsedPhoneDigits && /^55\d{10,11}$/.test(parsedPhoneDigits) ? parsedPhoneDigits : null;
 const phoneLabel = phoneDigits?.startsWith('55') && phoneDigits.length === 13
   ? `(${phoneDigits.slice(2, 4)}) ${phoneDigits.slice(4, 5)} ${phoneDigits.slice(5, 9)}-${phoneDigits.slice(9)}`
   : phone;
@@ -23,9 +24,22 @@ export function EvaluationForm() {
     const whatsapp = String(fields.get('whatsapp') ?? '').trim();
     const email = String(fields.get('email') ?? '').trim();
     const message = String(fields.get('message') ?? '').trim();
+    const whatsappDigits = whatsapp.replace(/\D/g, '');
+    const nameField = event.currentTarget.elements.namedItem('name') as HTMLInputElement;
+    const whatsappField = event.currentTarget.elements.namedItem('whatsapp') as HTMLInputElement;
+    if (name.length < 2) {
+      nameField.setCustomValidity('Informe seu nome.');
+      nameField.reportValidity();
+      return;
+    }
+    if (!/^\d{10,11}$/.test(whatsappDigits)) {
+      whatsappField.setCustomValidity('Informe um WhatsApp com DDD (10 ou 11 dígitos).');
+      whatsappField.reportValidity();
+      return;
+    }
     const lines = [
       `Olá! Gostaria de agendar uma avaliação na Oral Face. Meu nome é ${name}.`,
-      `Meu WhatsApp: ${whatsapp}.`,
+      `Meu WhatsApp: ${whatsappDigits}.`,
       email ? `Meu e-mail: ${email}.` : '',
       message ? `Gostaria de conversar sobre: ${message}` : ''
     ].filter(Boolean);
@@ -55,9 +69,9 @@ export function EvaluationForm() {
       <p className="eyebrow">SEU PRÓXIMO PASSO</p>
       <h2 id="evaluation-title">Agende sua avaliação</h2>
       <p className="evaluation-intro">O primeiro passo para o seu melhor sorriso. Conte como podemos ajudar você.</p>
-      <form className="evaluation-form" onSubmit={handleSubmit}>
-        <label><span className="sr-only">Nome completo</span><input name="name" type="text" autoComplete="name" placeholder="Nome completo" maxLength={100} required /></label>
-        <label><span className="sr-only">WhatsApp</span><input name="whatsapp" type="tel" autoComplete="tel" inputMode="tel" placeholder="WhatsApp" maxLength={30} required /></label>
+      <form className="evaluation-form" method="post" onSubmit={handleSubmit}>
+        <label><span className="sr-only">Nome completo</span><input name="name" type="text" autoComplete="name" placeholder="Nome completo" minLength={2} maxLength={100} onInput={(event) => event.currentTarget.setCustomValidity('')} required /></label>
+        <label><span className="sr-only">WhatsApp</span><input name="whatsapp" type="tel" autoComplete="tel" inputMode="tel" placeholder="WhatsApp com DDD" maxLength={30} onInput={(event) => event.currentTarget.setCustomValidity('')} required /></label>
         <label><span className="sr-only">E-mail</span><input name="email" type="email" autoComplete="email" placeholder="E-mail" maxLength={120} /></label>
         <label><span className="sr-only">Como podemos ajudar?</span><textarea name="message" placeholder="Como podemos ajudar?" maxLength={500} rows={2} /></label>
         <button className="button button-primary" type="submit"><BrandIcon name="calendar" />Agendar avaliação<ArrowIcon /></button>
@@ -70,8 +84,8 @@ export function EvaluationForm() {
     <dialog ref={dialog} className="contact-dialog" aria-labelledby="evaluation-dialog-title">
       <form method="dialog"><button className="dialog-close" aria-label="Fechar aviso">×</button></form>
       <p className="eyebrow">ORAL FACE ODONTOLOGIA</p>
-      <h2 id="evaluation-dialog-title">Agendamento em preparação</h2>
-      <p>O canal de atendimento ainda está em confirmação nesta prévia. Seus dados não foram enviados.</p>
+      <h2 id="evaluation-dialog-title">Contato indisponível</h2>
+      <p>Não foi possível abrir o WhatsApp neste momento. Seus dados não foram enviados.</p>
       {request && <><p>Você pode copiar sua solicitação para usar quando o contato da clínica estiver disponível.</p><button type="button" className="button button-primary" onClick={copyRequest}>{copied ? 'Solicitação copiada' : 'Copiar solicitação'}<ArrowIcon /></button></>}
     </dialog>
   </>;

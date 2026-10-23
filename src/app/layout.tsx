@@ -2,8 +2,15 @@ import type { Metadata } from 'next';
 import content from '@/design-system/site-content.json';
 import './globals.css';
 
+const configuredSiteUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
+const siteUrl = configuredSiteUrl ? new URL(configuredSiteUrl) : null;
+
+if (siteUrl && (siteUrl.protocol !== 'https:' || siteUrl.username || siteUrl.password || siteUrl.pathname !== '/' || siteUrl.search || siteUrl.hash)) {
+  throw new Error('NEXT_PUBLIC_SITE_URL deve ser a origem HTTPS pública do site.');
+}
+
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
+  ...(siteUrl ? { metadataBase: siteUrl, alternates: { canonical: '/' } } : {}),
   title: content.seo.title,
   description: content.seo.description,
   applicationName: content.brand.name,
@@ -12,8 +19,10 @@ export const metadata: Metadata = {
     description: content.seo.description,
     type: 'website',
     locale: 'pt_BR',
-    images: [{ url: content.seo.ogImage, width: 1200, height: 630, alt: 'Oral Face Odontologia' }]
+    siteName: content.brand.name,
+    ...(siteUrl ? { url: siteUrl.href, images: [{ url: content.seo.ogImage, width: 1200, height: 630, alt: 'Oral Face Odontologia' }] } : {})
   },
+  ...(siteUrl ? { twitter: { card: 'summary_large_image', title: content.seo.title, description: content.seo.description, images: [content.seo.ogImage] } } : {}),
   icons: {
     icon: [
       { url: '/brand/favicon.ico' },

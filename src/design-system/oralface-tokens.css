@@ -1,5 +1,4 @@
-/* Oral Face · tokens do mockup 02 aprovado. Fonte carregada via Google Fonts com fallback local. */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+/* Tokens de referência da identidade Oral Face. */
 :root {
   --of-bordeaux: #6B1F2D; --of-bordeaux-hover: #541523;
   --of-rose: #C98A8E; --of-blush: #F7D9DA;
