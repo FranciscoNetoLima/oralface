@@ -1,0 +1,122 @@
+{
+  "brand": {
+    "name": "Oral Face Odontologia",
+    "doctor": "Dra. Tallita Andrade",
+    "location": "Juazeiro do Norte, Ceará",
+    "phoneE164": "+5588988143184",
+    "instagramUrl": null,
+    "streetAddress": null,
+    "cro": null,
+    "verifyBeforeLaunch": [
+      "Nome e grafia profissional",
+      "CRO/UF",
+      "Endereço e mapa",
+      "Instagram",
+      "Serviços e habilitações"
+    ]
+  },
+  "headerLinks": [
+    {
+      "title": "Início",
+      "anchor": "#inicio"
+    },
+    {
+      "title": "Sobre",
+      "anchor": "#sobre"
+    },
+    {
+      "title": "Tratamentos",
+      "anchor": "#tratamentos"
+    },
+    {
+      "title": "Dra. Tallita",
+      "anchor": "#dra-tallita"
+    },
+    {
+      "title": "Estrutura",
+      "anchor": "#estrutura"
+    },
+    {
+      "title": "Depoimentos",
+      "anchor": "#depoimentos"
+    },
+    {
+      "title": "Contato",
+      "anchor": "#contato"
+    }
+  ],
+  "hero": {
+    "eyebrow": "ODONTOLOGIA ESTÉTICA E SAÚDE BUCAL",
+    "title": "Sorrisos que transformam histórias",
+    "body": "Cuidado odontológico completo, unindo saúde, estética e bem-estar para você se sentir ainda mais confiante em todas as fases da sua vida.",
+    "primaryCta": "Agendar minha consulta",
+    "secondaryCta": "Conhecer os tratamentos",
+    "imageDesktop": "/images/hero/dra-tallita-hero-master.webp",
+    "imageMobile": "/images/hero/dra-tallita-hero-master.webp"
+  },
+  "benefits": [
+    "Atendimento humanizado",
+    "Ambiente acolhedor",
+    "Cuidado personalizado"
+  ],
+  "clinic": {
+    "eyebrow": "NOSSA CLÍNICA",
+    "title": "Um espaço pensado para você sorrir bem",
+    "body": "Na Oral Face Odontologia, em Juazeiro do Norte, buscamos unir conforto, acolhimento e cuidado individualizado em cada atendimento.",
+    "image": "/images/clinic/fachada-real-oralface.webp"
+  },
+  "services": [
+    {
+      "id": "clareamento",
+      "title": "Clareamento Dental",
+      "description": "Um cuidado estético planejado para valorizar o seu sorriso.",
+      "image": "/images/services/clareamento-dental-thumb.webp"
+    },
+    {
+      "id": "ortodontia",
+      "title": "Ortodontia e Alinhamento",
+      "description": "Planejamento para melhorar alinhamento, estética e função do sorriso.",
+      "image": "/images/services/ortodontia-e-alinhamento-thumb.webp"
+    },
+    {
+      "id": "lentes",
+      "title": "Lentes de Contato Dental",
+      "description": "Possibilidades de estética dental com avaliação individualizada.",
+      "image": "/images/services/lentes-de-contato-dental-thumb.webp"
+    },
+    {
+      "id": "harmonizacao",
+      "title": "Harmonização do Sorriso",
+      "description": "Equilíbrio e naturalidade guiando cada plano de cuidado.",
+      "image": "/images/services/harmonizacao-do-sorriso-thumb.webp"
+    },
+    {
+      "id": "prevencao",
+      "title": "Prevenção e Limpeza",
+      "description": "Acompanhamento e cuidados de rotina para preservar a saúde bucal.",
+      "image": "/images/services/prevencao-e-limpeza-thumb.webp"
+    }
+  ],
+  "doctor": {
+    "eyebrow": "DRA. TALLITA ANDRADE",
+    "title": "Cuidado, técnica e resultados naturais",
+    "body": "Cirurgiã-dentista, a Dra. Tallita Andrade une planejamento, atenção aos detalhes e acolhimento em cada etapa do cuidado odontológico.",
+    "image": "/images/doctor/dra-tallita-inteira.jpeg"
+  },
+  "quote": {
+    "text": "Antes da estética, vem o cuidado.",
+    "body": "Acreditamos que um sorriso bonito nasce de uma saúde bucal bem cuidada, com planejamento, técnica e respeito à sua individualidade.",
+    "attribution": null,
+    "isEditorialCopy": true
+  },
+  "contact": {
+    "title": "Agende sua consulta e dê o primeiro passo para o seu melhor sorriso",
+    "primaryCta": "Conversar no WhatsApp",
+    "secondaryCta": "Falar com a clínica"
+  },
+  "seo": {
+    "title": "Oral Face Odontologia | Cuidado e estética dental em Juazeiro do Norte",
+    "description": "Conheça a Oral Face Odontologia e a Dra. Tallita Andrade em Juazeiro do Norte. Informações sobre a clínica e os tratamentos odontológicos.",
+    "ogImage": "/brand/open-graph-1200x630.jpg"
+  }
+}

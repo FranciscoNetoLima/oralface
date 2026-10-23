@@ -1,0 +1,29 @@
+/* Oral Face · tokens do mockup 02 aprovado. Fonte carregada via Google Fonts com fallback local. */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+:root {
+  --of-bordeaux: #6B1F2D; --of-bordeaux-hover: #541523;
+  --of-rose: #C98A8E; --of-blush: #F7D9DA;
+  --of-nude: #EAD7CE; --of-offwhite: #FBF8F6;
+  --of-warm-gray: #A79B97; --of-ink: #3D2A2D;
+  --of-muted-text: #726467; --of-stroke: #E9DDDA; --of-white: #FFFFFF;
+  --of-display: 'Playfair Display', Georgia, serif;
+  --of-body: 'Poppins', system-ui, -apple-system, sans-serif;
+  --of-container: 1240px; --of-gutter: clamp(20px, 4vw, 48px);
+  --of-radius-sm: 12px; --of-radius-md: 20px; --of-radius-lg: 28px;
+  --of-radius-pill: 999px;
+  --of-shadow-soft: 0 10px 32px rgba(75, 24, 37, .07);
+  --of-shadow-hover: 0 20px 50px rgba(75, 24, 37, .12);
+  --of-section-space: clamp(72px, 8vw, 120px);
+  --of-motion-fast: 180ms cubic-bezier(.22,1,.36,1);
+  --of-motion-soft: 450ms cubic-bezier(.22,1,.36,1);
+}
+/* Regras básicas opcionais: não sobrescrever reset/base do projeto sem checar */
+.of-container{width:min(calc(100% - 2 * var(--of-gutter)),var(--of-container));margin-inline:auto}
+.of-display{font-family:var(--of-display);font-weight:400;letter-spacing:-.045em;line-height:1.08}
+.of-button{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:12px 24px;border-radius:var(--of-radius-pill);font-family:var(--of-body);font-weight:500;text-decoration:none;transition:background var(--of-motion-fast),transform var(--of-motion-fast),box-shadow var(--of-motion-fast)}
+.of-button--primary{background:var(--of-bordeaux);color:white}
+.of-button--primary:hover{background:var(--of-bordeaux-hover);transform:translateY(-2px)}
+.of-button--secondary{color:var(--of-bordeaux);border:1px solid #D6B5B1;background:transparent}
+.of-button--secondary:hover{background:#F7E9E7;transform:translateY(-2px)}
+.of-button:focus-visible{outline:3px solid var(--of-rose);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){.of-button{transition:none}.of-button:hover{transform:none}}

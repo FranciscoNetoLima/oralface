@@ -1,0 +1,1 @@
+Leia e execute integralmente o arquivo oralface-web-kit-codex/INSTRUCAO_UNICA_PARA_CODEX.md, seguindo o mockup 02 aprovado, os assets, o design system e os prompts 00 a 06 em ordem, sem solicitar instruções entre etapas. Adapte à stack atual, valide o build e relate apenas as pendências reais.

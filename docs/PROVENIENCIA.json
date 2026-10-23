@@ -1,0 +1,14 @@
+{
+  "generatedBy": "OpenAI image generation, derived from references in user conversation",
+  "doctor": [
+    "dentista_elegante_em_clínica_sofisticada.png",
+    "retrato_profissional_em_clínica_odontológica.png"
+  ],
+  "doctorApprovalRequired": true,
+  "logoRecreatedNotOfficialVector": true,
+  "facadeProduction": "fachada_da_oral_face_odontologia.png",
+  "facadeAIMockupUseForbidden": true,
+  "serviceImages": "Synthetic concept imagery; not actual before-after or outcomes",
+  "mockup": "Second mockup approved by user",
+  "facadeProductionNotes": "Versão aprovada da fachada para uso no site e no kit."
+}

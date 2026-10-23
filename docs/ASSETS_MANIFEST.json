@@ -1,0 +1,122 @@
+{
+  "mockup": "references/mockup-approved/ORALFACE_MOCKUP_02_APROVADO.png",
+  "imageFiles": [
+    {
+      "path": "public/images/hero/dra-tallita-hero-desktop.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 89416
+    },
+    {
+      "path": "public/images/hero/dra-tallita-hero-mobile.webp",
+      "width": 800,
+      "height": 1000,
+      "bytes": 60566
+    },
+    {
+      "path": "public/images/hero/dra-tallita-sobre.webp",
+      "width": 1050,
+      "height": 1312,
+      "bytes": 80112
+    },
+    {
+      "path": "public/images/clinic/fachada-real-oralface.webp",
+      "width": 382,
+      "height": 510,
+      "bytes": 41432
+    },
+    {
+      "path": "public/images/services/clareamento-dental.webp",
+      "width": 1200,
+      "height": 900,
+      "bytes": 44536,
+      "role": "Clareamento dental"
+    },
+    {
+      "path": "public/images/services/clareamento-dental-thumb.webp",
+      "role": "Clareamento dental - thumbnail",
+      "width": 640,
+      "height": 480,
+      "bytes": 11970
+    },
+    {
+      "path": "public/images/services/ortodontia-e-alinhamento.webp",
+      "width": 1200,
+      "height": 900,
+      "bytes": 61550,
+      "role": "Ortodontia e alinhamento"
+    },
+    {
+      "path": "public/images/services/ortodontia-e-alinhamento-thumb.webp",
+      "role": "Ortodontia e alinhamento - thumbnail",
+      "width": 640,
+      "height": 480,
+      "bytes": 21260
+    },
+    {
+      "path": "public/images/services/lentes-de-contato-dental.webp",
+      "width": 1200,
+      "height": 900,
+      "bytes": 71190,
+      "role": "Lentes de contato dental"
+    },
+    {
+      "path": "public/images/services/lentes-de-contato-dental-thumb.webp",
+      "role": "Lentes de contato dental - thumbnail",
+      "width": 640,
+      "height": 480,
+      "bytes": 24324
+    },
+    {
+      "path": "public/images/services/harmonizacao-do-sorriso.webp",
+      "width": 1200,
+      "height": 900,
+      "bytes": 48512,
+      "role": "Harmonização do sorriso"
+    },
+    {
+      "path": "public/images/services/harmonizacao-do-sorriso-thumb.webp",
+      "role": "Harmonização do sorriso - thumbnail",
+      "width": 640,
+      "height": 480,
+      "bytes": 13976
+    },
+    {
+      "path": "public/images/services/prevencao-e-limpeza.webp",
+      "width": 1200,
+      "height": 900,
+      "bytes": 60728,
+      "role": "Prevenção e limpeza"
+    },
+    {
+      "path": "public/images/services/prevencao-e-limpeza-thumb.webp",
+      "role": "Prevenção e limpeza - thumbnail",
+      "width": 640,
+      "height": 480,
+      "bytes": 23558
+    },
+    {
+      "path": "public/images/services/atendimento-humanizado.webp",
+      "width": 1200,
+      "height": 900,
+      "bytes": 57714,
+      "role": "Atendimento humanizado"
+    },
+    {
+      "path": "public/images/services/atendimento-humanizado-thumb.webp",
+      "role": "Atendimento humanizado - thumbnail",
+      "width": 640,
+      "height": 480,
+      "bytes": 23324
+    }
+  ],
+  "logoFiles": [
+    "/brand/logo-oralface-transparente.png",
+    "/brand/simbolo-oralface-transparente.png"
+  ],
+  "status": {
+    "doctorPhotos": "AI reconstructions, approve with client",
+    "services": "AI illustrative only, not actual clinical outcomes",
+    "facade": "genuine user-provided photograph; no fabricated text"
+  }
+}
