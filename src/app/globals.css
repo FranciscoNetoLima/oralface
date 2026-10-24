@@ -45,7 +45,6 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; letter-spacing:
 
 .site-header { position: relative; z-index: 30; background: #fffdfbf5; }
 .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 25px; min-height: clamp(66px, 5vw, 80px); }
-.header-inner::after { content: ''; width: clamp(160px, 13vw, 208px); flex: none; }
 .brand-link { display: flex; flex: none; align-items: center; width: clamp(160px, 13vw, 208px); }
 .brand-link img { width: 100%; height: auto; }
 .main-nav { display: flex; align-items: center; justify-content: center; gap: clamp(15px, 1.7vw, 27px); }
@@ -78,7 +77,7 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; letter-spacing:
 .hero-doctor-label { position: absolute; z-index: 2; right: clamp(24px, 4.5vw, 80px); bottom: 30px; min-width: 245px; padding: 22px; color: var(--wine); background: #fcf8f6f2; font-size: 11px; font-weight: 600; letter-spacing: .15em; white-space: nowrap; }
 .hero-benefits { min-height: 66px; background: #fcf8f6; }
 .hero-benefits-inner { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: center; gap: 20px; width: calc(100% - var(--gutter) * 2); max-width: 1600px; min-height: inherit; margin-inline: auto; border-top: 1px solid #dec6c4; }
-.hero-benefits span { color: var(--wine); font-size: clamp(9px, .72vw, 11px); font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+.hero-benefits span { color: var(--wine); font-size: clamp(9px, .72vw, 11px); font-weight: 600; letter-spacing: .12em; text-align: center; text-transform: uppercase; }
 
 .clinic { position: relative; padding-block: clamp(48px, 4.2vw, 80px); background: #fcf8f6; }
 .anchor-offset { position: absolute; top: 0; }
@@ -124,16 +123,28 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; letter-spacing:
 .contact-dialog > p:not(.eyebrow) { font-size: 13px; color: #786467; }
 .dialog-close { position: absolute; top: 8px; right: 10px; width: 44px; height: 44px; border: 0; background: transparent; color: var(--wine); font-size: 29px; }
 
-.site-footer { position: relative; background: #fcf5f1; }
-.footer-main { display: flex; justify-content: space-between; align-items: center; gap: 24px; width: 86%; min-height: 68px; }
-.footer-brand { flex: none; }
-.footer-brand img { width: 165px; height: auto; }
-.footer-main nav { display: flex; align-items: center; gap: 20px; }
-.footer-main nav a { display: flex; align-items: center; min-height: 44px; color: #735c60; font-size: 10px; white-space: nowrap; }
-.footer-main nav a:hover { color: var(--wine); }
-.footer-location { display: flex; gap: 9px; align-items: center; color: var(--wine); font-size: 10px; white-space: nowrap; }
-.footer-location svg { width: 19px; height: 19px; }
-.footer-bottom { display: flex; justify-content: space-between; align-items: center; gap: 8px 24px; padding-block: 10px 14px; border-top: 1px solid #e9d8d170; color: #9c888b; font-size: 10px; }
+.site-footer { position: relative; overflow: hidden; border-top: 1px solid #e4c9c6; color: var(--wine-dark); background: #f7eee9; }
+.footer-lead { padding-block: clamp(62px, 6vw, 108px) clamp(48px, 4.8vw, 82px); border-bottom: 1px solid #dcc4c0; }
+.footer-lead > p { margin: 0 0 20px; color: #9b5863; font-size: 11px; font-weight: 600; letter-spacing: .2em; }
+.footer-lead h2 { max-width: 1100px; margin: 0; font-size: clamp(46px, 5vw, 86px); line-height: 1.08; }
+.footer-lead h2 em { color: #b77b83; font-weight: 400; }
+.footer-main { display: grid; grid-template-columns: minmax(260px, 1.45fr) minmax(130px, .68fr) minmax(220px, 1fr) minmax(190px, .8fr); gap: clamp(26px, 3vw, 66px); padding-block: clamp(46px, 4.5vw, 78px); }
+.footer-brand { display: inline-flex; max-width: 245px; }
+.footer-brand img { width: 100%; height: auto; }
+.footer-about > p { max-width: 310px; margin: 20px 0 0; color: #80696b; font-size: 14px; line-height: 1.7; }
+.footer-main h3 { margin: 5px 0 24px; color: #a26f73; font-family: var(--font-body); font-size: 11px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; }
+.footer-navigation { display: flex; flex-direction: column; align-items: flex-start; }
+.footer-navigation a { min-height: 34px; color: #5f3c43; font-size: 14px; }
+.footer-navigation a:hover, .footer-location a:hover { color: #ac6a75; }
+.footer-contact > a { display: flex; align-items: center; gap: 10px; width: fit-content; max-width: 100%; padding-bottom: 12px; border-bottom: 1px solid #c49b9d; color: var(--wine); font-size: clamp(15px, 1.1vw, 18px); font-weight: 600; white-space: nowrap; }
+.footer-contact > a svg:first-child { width: 23px; height: 23px; flex: none; }
+.footer-contact > a svg:last-child { width: 15px; height: 15px; flex: none; }
+.footer-contact > p { max-width: 260px; margin: 14px 0 0; color: #80696b; font-size: 12px; line-height: 1.6; }
+.footer-location > p { display: flex; align-items: flex-start; gap: 10px; margin: 0 0 16px; color: #5f3c43; font-size: 14px; line-height: 1.5; }
+.footer-location > p svg { width: 20px; height: 20px; flex: none; color: var(--wine); }
+.footer-location > a { display: inline-flex; align-items: center; gap: 8px; color: var(--wine); font-size: 12px; font-weight: 600; }
+.footer-location > a svg { width: 14px; height: 14px; }
+.footer-bottom { display: flex; justify-content: space-between; align-items: center; gap: 12px 24px; min-height: 68px; border-top: 1px solid #dcc4c0; color: #987f81; font-size: 11px; }
 .footer-bottom a { color: var(--wine); text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: text-decoration-color .2s ease; }
 .footer-bottom a:hover, .footer-bottom a:focus-visible { text-decoration-color: currentColor; }
 
@@ -173,7 +184,6 @@ html.has-reveal .service-card.is-visible:hover { transform: translateY(-4px); }
 
 @media (max-width: 1000px) {
   .site-header, .header-inner { min-height: 72px; }
-  .header-inner::after { display: none; }
   .brand-link { width: 170px; }
   .menu-toggle { display: flex; flex-direction: column; justify-content: center; gap: 5px; width: 44px; height: 44px; padding: 11px; border: 0; background: transparent; }
   .menu-toggle span { display: block; width: 100%; height: 2px; background: var(--wine); }
@@ -206,8 +216,8 @@ html.has-reveal .service-card.is-visible:hover { transform: translateY(-4px); }
   .service-content { padding: 22px 18px 13px 28px; }
   .service-content h3 { font-size: 22px; }
   .service-content p { font-size: 11px; }
-  .footer-main { flex-wrap: wrap; width: calc(100% - var(--gutter) * 2); gap: 10px 24px; padding-block: 20px; }
-  .footer-main nav { gap: 16px; }
+  .footer-main { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 40px; }
+  .footer-about { grid-column: 1 / -1; }
 }
 
 @media (max-width: 700px) {
@@ -232,7 +242,7 @@ html.has-reveal .service-card.is-visible:hover { transform: translateY(-4px); }
   .hero-actions .button-primary { width: min(100%, 285px); min-height: 52px; padding-inline: 21px; font-size: 12px; }
   .hero-secondary { min-height: 44px; font-size: 11px; }
   .hero-benefits { min-height: 49px; }
-  .hero-benefits-inner { display: flex; min-height: 49px; }
+  .hero-benefits-inner { display: flex; justify-content: center; min-height: 49px; }
   .hero-benefits span { font-size: 9px; }
   .hero-benefits span:not(:first-child) { display: none; }
   .clinic { padding-block: 44px 48px; }
@@ -260,12 +270,13 @@ html.has-reveal .service-card.is-visible:hover { transform: translateY(-4px); }
   .service-content p { font-size: 11px; line-height: 1.5; }
   .service-content a { min-height: 44px; font-size: 10px; }
   .desktop-break { display: none; }
-  .footer-main { flex-direction: column; align-items: flex-start; gap: 12px; padding-block: 25px; }
-  .footer-brand img { width: 165px; }
-  .footer-main nav { flex-wrap: wrap; gap: 0 20px; }
-  .footer-main nav a { font-size: 11px; }
-  .footer-location { font-size: 11px; }
-  .footer-bottom { flex-direction: column; align-items: flex-start; padding-block: 12px; }
+  .footer-lead { padding-block: 58px 44px; }
+  .footer-lead h2 { font-size: clamp(43px, 10.4vw, 62px); }
+  .footer-main { grid-template-columns: 1fr; gap: 31px; padding-block: 44px 50px; }
+  .footer-about { grid-column: auto; }
+  .footer-brand { max-width: 205px; }
+  .footer-main h3 { margin-bottom: 14px; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; padding-block: 22px 28px; }
 }
 
 .doctor-section { padding-block: clamp(64px, 5vw, 96px); background: radial-gradient(ellipse at 4% 100%, #f4e6e1, transparent 39%), #fcf8f6; }

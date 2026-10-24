@@ -99,13 +99,36 @@ export default function Home() {
       </section>
     </main>
     <footer className="site-footer">
+      <div className="container footer-lead">
+        <p>ORAL FACE · ODONTOLOGIA</p>
+        <h2>Seu sorriso, <em>cuidado em cada detalhe.</em></h2>
+      </div>
       <div className="container footer-main">
-        <a href="#inicio" className="footer-brand"><Image src="/brand/logo-oralface-horizontal.png" width={185} height={62} alt="Oral Face Odontologia" /></a>
-        <nav aria-label="Navegação do rodapé"><a href="#inicio">Início</a><a href="#sobre">Sobre</a><a href="#tratamentos">Tratamentos</a><a href="#dra-tallita">Dra. Tallita</a><a href="#estrutura">Estrutura</a><a href="#contato">Contato</a></nav>
-        <span className="footer-location"><BrandIcon name="pin" />Juazeiro do Norte · CE</span>
+        <div className="footer-about">
+          <a href="#inicio" className="footer-brand" aria-label="Oral Face Odontologia — voltar ao início"><Image src="/brand/logo-oralface-transparente.png" width={260} height={86} alt="Oral Face Odontologia" /></a>
+          <p>Odontologia em Juazeiro do Norte que une saúde, estética e cuidado individualizado.</p>
+        </div>
+        <nav className="footer-navigation" aria-label="Navegação do rodapé">
+          <h3>Explore</h3>
+          <a href="#sobre">Nossa clínica</a>
+          <a href="#tratamentos">Tratamentos</a>
+          <a href="#dra-tallita">Dra. Tallita</a>
+          <a href="#contato">Agendamento</a>
+        </nav>
+        <div className="footer-contact">
+          <h3>Entre em contato</h3>
+          <a href={`https://wa.me/${content.brand.phoneE164.replace(/\D/g, '')}`} target="_blank" rel="noopener noreferrer"><BrandIcon name="whatsapp" /><span>(88) 9 8814-3184</span><ArrowIcon diagonal /></a>
+          <p>Envie uma mensagem para solicitar sua avaliação.</p>
+        </div>
+        <div className="footer-location">
+          <h3>Onde estamos</h3>
+          <p><BrandIcon name="pin" />Juazeiro do Norte · CE</p>
+          <a href="#sobre">Conheça a clínica <ArrowIcon diagonal /></a>
+        </div>
       </div>
       <div className="container footer-bottom">
         <span>© {new Date().getFullYear()} Oral Face Odontologia</span>
+        <a href="#inicio">Voltar ao início ↑</a>
         <span>Desenvolvido por <a href="https://amplium.pro/#inicio" target="_blank" rel="noopener noreferrer">Francisco Neto | Amplium</a></span>
       </div>
     </footer>
