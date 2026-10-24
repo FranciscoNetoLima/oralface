@@ -6,11 +6,9 @@ import { ArrowIcon } from './ArrowIcon';
 import { BrandIcon } from './BrandIcon';
 
 const links = [
-  { label: 'Início', href: '#inicio' },
   { label: 'Sobre', href: '#sobre' },
   { label: 'Tratamentos', href: '#tratamentos' },
   { label: 'Dra. Tallita', href: '#dra-tallita' },
-  { label: 'Estrutura', href: '#estrutura' },
   { label: 'Contato', href: '#contato' }
 ];
 
