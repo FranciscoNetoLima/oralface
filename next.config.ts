@@ -4,6 +4,9 @@ const nextConfig: NextConfig = {
   agentRules: false,
   devIndicators: false,
   poweredByHeader: false,
+  images: {
+    qualities: [75, 90]
+  },
   async headers() {
     const securityHeaders = [
       { key: 'X-Content-Type-Options', value: 'nosniff' },

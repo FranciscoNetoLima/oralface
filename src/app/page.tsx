@@ -6,8 +6,8 @@ import { EvaluationForm } from '@/components/EvaluationForm';
 import { SiteHeader } from '@/components/SiteHeader';
 import { ScrollReveal } from '@/components/ScrollReveal';
 
-const portrait = '/images/hero/dra-tallita-hero-master.webp';
-const facade = '/images/clinic/fachada-real-oralface.webp';
+const portrait = content.hero.imageDesktop;
+const facade = content.clinic.image;
 export default function Home() {
   return <div className="site-frame">
     <a className="skip-link" href="#conteudo">Ir para o conteúdo</a>
@@ -28,8 +28,8 @@ export default function Home() {
           </div>
           <div className="hero-visual" data-reveal>
             <picture className="hero-photo-shell">
-              <source media="(max-width: 700px)" srcSet="/images/hero/dra-tallita-hero-mobile.webp" type="image/webp" />
-              <Image src={portrait} alt="Dra. Tallita Andrade no consultório odontológico" fill loading="eager" fetchPriority="high" sizes="(max-width: 700px) 100vw, (max-width: 1000px) 52vw, 60vw" className="hero-photo" />
+              <source media="(max-width: 700px)" srcSet={content.hero.imageMobile} type="image/webp" />
+              <Image src={portrait} alt="Dra. Tallita Andrade no consultório odontológico" fill loading="eager" fetchPriority="high" quality={90} sizes="(max-width: 700px) 100vw, (max-width: 1000px) 75vw, 80vw" className="hero-photo" />
             </picture>
             <svg className="hero-photo-curve" viewBox="0 0 200 720" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0H64C21 88-8 205 24 317C62 446 87 573 13 720H0Z" className="hero-curve-fill" /><path d="M64 0C21 88-8 205 24 317C62 446 87 573 13 720" className="hero-curve-line" /></svg>
             <svg className="hero-mobile-wave" viewBox="0 0 390 55" preserveAspectRatio="none" aria-hidden="true"><path d="M0 26C102 62 288 62 390 26V55H0Z" className="hero-wave-fill" /><path d="M0 26C102 62 288 62 390 26" className="hero-wave-line" /></svg>
@@ -49,7 +49,7 @@ export default function Home() {
               <a href="#estrutura" className="button combined-button-light">Conhecer nossa estrutura<ArrowIcon /></a>
             </div>
             <figure className="clinic-combined-figure" id="estrutura" data-reveal>
-              <div className="clinic-combined-photo"><Image src={facade} alt="Fachada real da Oral Face Odontologia em Juazeiro do Norte" fill sizes="(max-width: 700px) 100vw, (max-width: 1100px) 52vw, 48vw" /></div>
+              <div className="clinic-combined-photo"><Image src={facade} alt="Fachada real da Oral Face Odontologia em Juazeiro do Norte" fill unoptimized sizes="(max-width: 700px) 100vw, (max-width: 1100px) 52vw, 48vw" /></div>
               <figcaption>FACHADA REAL · JUAZEIRO DO NORTE</figcaption>
             </figure>
           </div>
@@ -69,12 +69,12 @@ export default function Home() {
           </div>
           <div className="services-combined-catalog" id="lista-tratamentos">
             <a className="service-featured" href="#contato" aria-label={`Agendar avaliação para ${content.services[0].title}`} data-reveal>
-              <div className="service-featured-image"><Image src={content.services[0].image} alt="" fill sizes="(max-width: 700px) 100vw, (max-width: 1100px) 45vw, 30vw" /></div>
+              <div className="service-featured-image"><Image src={content.services[0].image} alt="" fill unoptimized sizes="(max-width: 700px) 100vw, (max-width: 1100px) 45vw, 30vw" /></div>
               <div className="service-featured-copy"><p className="section-index"><span>01</span><i />TRATAMENTO EM DESTAQUE</p><h3>{content.services[0].title}</h3><p>{content.services[0].description}</p><ArrowIcon /></div>
             </a>
             <div className="services-combined-grid">
               {content.services.slice(1).map((service, index) => <a className="service-tile" key={service.id} href="#contato" aria-label={`Agendar avaliação para ${service.title}`} data-reveal>
-                <div className="service-tile-image"><Image src={service.image} alt="" fill sizes="(max-width: 700px) 32vw, (max-width: 1100px) 18vw, 12vw" /></div>
+                <div className="service-tile-image"><Image src={service.image} alt="" fill unoptimized sizes="(max-width: 700px) 32vw, (max-width: 1100px) 18vw, 12vw" /></div>
                 <div className="service-tile-copy"><span>0{index + 2}</span><h3>{service.title}</h3><p>{service.description}</p></div><ArrowIcon />
               </a>)}
             </div>
@@ -84,7 +84,7 @@ export default function Home() {
 
       <section className="doctor-combined" id="dra-tallita" aria-labelledby="doctor-title">
         <div className="combined-container doctor-combined-layout">
-          <figure className="doctor-combined-figure" data-reveal><div className="doctor-combined-photo"><Image src="/images/doctor/dra-tallita-inteira.jpeg" alt="Dra. Tallita Andrade em retrato amplo, com roupa clara" width={1121} height={1403} sizes="(max-width: 700px) calc(100vw - 48px), (max-width: 1100px) 42vw, 36vw" /></div><figcaption>DRA. TALLITA ANDRADE</figcaption></figure>
+          <figure className="doctor-combined-figure" data-reveal><div className="doctor-combined-photo"><Image src="/images/doctor/dra-tallita-inteira.jpeg" alt="Dra. Tallita Andrade em retrato amplo, com roupa clara" width={1121} height={1403} quality={90} sizes="(max-width: 700px) calc(100vw - 48px), (max-width: 1100px) 55vw, min(60vw, 1100px)" /></div><figcaption>DRA. TALLITA ANDRADE</figcaption></figure>
           <div className="doctor-combined-copy" data-reveal>
             <p className="section-index"><span>03</span><i />DRA. TALLITA ANDRADE</p>
             <h2 id="doctor-title">Cuidado, técnica<br />e resultados naturais.</h2>
