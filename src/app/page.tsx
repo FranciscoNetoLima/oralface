@@ -117,7 +117,10 @@ export default function Home() {
         <nav aria-label="Navegação do rodapé"><a href="#inicio">Início</a><a href="#sobre">Sobre</a><a href="#tratamentos">Tratamentos</a><a href="#dra-tallita">Dra. Tallita</a><a href="#estrutura">Estrutura</a><a href="#contato">Contato</a></nav>
         <span className="footer-location"><BrandIcon name="pin" />Juazeiro do Norte · CE</span>
       </div>
-      <div className="container footer-bottom">© {new Date().getFullYear()} Oral Face Odontologia</div>
+      <div className="container footer-bottom">
+        <span>© {new Date().getFullYear()} Oral Face Odontologia</span>
+        <span>Desenvolvido por <a href="https://amplium.pro/#inicio" target="_blank" rel="noopener noreferrer">Francisco Neto | Amplium</a></span>
+      </div>
     </footer>
   </div>;
 }

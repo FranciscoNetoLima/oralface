@@ -135,7 +135,9 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; letter-spacing:
 .footer-main nav a:hover { color: var(--wine); }
 .footer-location { display: flex; gap: 9px; align-items: center; color: var(--wine); font-size: 10px; white-space: nowrap; }
 .footer-location svg { width: 19px; height: 19px; }
-.footer-bottom { padding-block: 5px 10px; border-top: 1px solid #e9d8d170; color: #9c888b; font-size: 9px; text-align: center; }
+.footer-bottom { display: flex; justify-content: space-between; align-items: center; gap: 8px 24px; padding-block: 10px 14px; border-top: 1px solid #e9d8d170; color: #9c888b; font-size: 10px; }
+.footer-bottom a { color: var(--wine); text-decoration: underline; text-decoration-color: transparent; text-underline-offset: 3px; transition: text-decoration-color .2s ease; }
+.footer-bottom a:hover, .footer-bottom a:focus-visible { text-decoration-color: currentColor; }
 
 html.has-reveal [data-reveal] { opacity: 0; transform: translateY(12px); transition: opacity .45s ease, transform .45s ease; }
 html.has-reveal [data-reveal].is-visible { opacity: 1; transform: translateY(0); }
@@ -273,7 +275,7 @@ html.has-reveal .service-card.is-visible:hover { transform: translateY(-4px); }
   .footer-main nav { flex-wrap: wrap; gap: 0 20px; }
   .footer-main nav a { font-size: 11px; }
   .footer-location { font-size: 11px; }
-  .footer-bottom { text-align: left; padding-block: 12px; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; padding-block: 12px; }
 }
 
 @media (min-width: 500px) and (max-width: 700px) {
