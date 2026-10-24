@@ -2,8 +2,6 @@
 
 import Image from 'next/image';
 import { useState } from 'react';
-import { ArrowIcon } from './ArrowIcon';
-import { BrandIcon } from './BrandIcon';
 
 const links = [
   { label: 'Sobre', href: '#sobre' },
@@ -23,9 +21,7 @@ export function SiteHeader() {
         </a>
         <nav aria-label="Navegação principal" className={`main-nav ${menuOpen ? 'is-open' : ''}`} id="main-menu">
           {links.map((link) => <a key={link.href} href={link.href} onClick={() => setMenuOpen(false)}>{link.label}</a>)}
-          <a className="mobile-nav-cta" href="#contato" onClick={() => setMenuOpen(false)}>Agendar consulta <ArrowIcon /></a>
         </nav>
-        <a className="button button-primary header-cta" href="#contato"><BrandIcon name="calendar" />Agendar consulta <ArrowIcon /></a>
         <button
           className="menu-toggle"
           type="button"

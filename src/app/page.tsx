@@ -90,7 +90,6 @@ export default function Home() {
             <h2 id="doctor-title">Cuidado, técnica<br />e resultados naturais.</h2>
             <p className="doctor-combined-description">{content.doctor.body}</p>
             <div className="doctor-combined-quote"><span aria-hidden="true">“</span><div><h3>{content.quote.text}</h3><p>{content.quote.body}</p></div></div>
-            <a href="#contato" className="button combined-button-light">Agendar minha avaliação<ArrowIcon /></a>
           </div>
         </div>
       </section>
