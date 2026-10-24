@@ -11,7 +11,6 @@
   --line: #e9ddda;
   --font-display: 'Playfair Display', Georgia, serif;
   --font-body: Poppins, Arial, sans-serif;
-  --font-handwritten: Caveat, cursive;
   --gutter: clamp(24px, 5vw, 96px);
 }
 
@@ -55,32 +54,31 @@ h1, h2, h3 { font-family: var(--font-display); font-weight: 400; letter-spacing:
 .main-nav .mobile-nav-cta, .menu-toggle { display: none; }
 .header-cta { min-height: 44px; padding-inline: 18px; font-size: 11px; }
 
-.hero { position: relative; background: radial-gradient(ellipse at 0 80%, #f7e8e3, transparent 55%), linear-gradient(100deg, #fcf8f6, #f7eeea); }
-.hero-grid { --hero-height: clamp(500px, 37.7vw, 603px); position: relative; display: grid; grid-template-columns: 45% 55%; width: 100%; max-width: 1920px; min-height: var(--hero-height); margin-inline: auto; }
-.hero-copy { position: relative; z-index: 2; align-self: center; padding: 28px 0 27px clamp(72px, 8.333vw, 160px); }
-.hero-copy .eyebrow { margin-bottom: 8px; white-space: nowrap; }
-.hero h1 { position: relative; margin: 0 0 18px; color: var(--wine-dark); font-size: clamp(64px, 5.45vw, 87px); line-height: .99; letter-spacing: -.055em; }
-.hero h1 span { display: block; }
-.hero-description { max-width: 430px; margin-bottom: 20px; padding-right: 15px; color: #65575a; font-size: clamp(13px, 1.12vw, 17px); line-height: 1.4; }
-.hero-actions { display: flex; gap: 12px; align-items: center; }
-.hero-actions .button { padding-inline: 18px; }
-.hero-actions .button-primary { gap: 9px; }
-.hero-secondary { min-width: 0; }
-.botanical-accent { position: absolute; pointer-events: none; color: #d9a89f; }
-.hero-botanical { left: -92px; top: -46px; width: 300px; height: 570px; opacity: .24; transform: rotate(-14deg); }
-.hero-visual { position: relative; min-height: inherit; }
-.hero-visual::before { content: ''; position: absolute; inset: 0 0 0 -18px; border-radius: 42% 0 0 45% / 80% 0 0 80%; background: #e6c9bf; }
-.hero-photo-shell { position: absolute; inset: 0 0 0 7px; overflow: hidden; border-radius: 42% 0 0 45% / 80% 0 0 80%; }
-.hero-photo { object-fit: cover; object-position: center 48%; }
-.hero-signature { position: absolute; z-index: 2; top: 16%; right: 5%; width: 235px; color: #4c302c; font-family: var(--font-handwritten); font-size: clamp(26px, 2.25vw, 36px); line-height: 1.15; transform: rotate(-5deg); }
-.hero-signature i { display: block; width: 60px; margin-top: 28px; border-top: 2px solid #72534a; }
-.hero-doctor-label { position: absolute; z-index: 2; top: 55%; right: 7%; display: flex; flex-direction: column; color: #3c2728; font-size: 10px; letter-spacing: .055em; line-height: 1.65; }
-.hero-doctor-label span { font-size: 9px; }
-.hero-wave { position: absolute; z-index: 3; right: 0; bottom: -1px; width: 100%; height: 69px; fill: var(--cream); }
-.benefits-row { display: flex; align-items: center; justify-content: space-between; gap: 14px; max-width: 530px; margin-top: 28px; padding-right: 12px; }
-.benefit { display: flex; align-items: center; gap: 11px; color: #6b5d60; font-size: clamp(10px, .82vw, 12px); line-height: 1.45; }
-.benefit svg { width: 33px; height: 33px; flex: none; color: var(--wine); }
-.benefit span { max-width: 100px; }
+.hero-editorial { position: relative; background: #fcf8f6; }
+.hero-stage { position: relative; min-height: clamp(620px, 49.9vw, 780px); overflow: hidden; }
+.hero-copy { position: relative; z-index: 3; display: flex; flex-direction: column; align-items: flex-start; width: min(50%, 1080px); min-height: inherit; padding: clamp(70px, 5vw, 92px) 0 36px max(var(--gutter), calc((100vw - 1600px) / 2)); }
+.hero-copy .eyebrow { margin-bottom: clamp(32px, 3.6vw, 52px); font-size: clamp(10px, .8vw, 12px); font-weight: 600; letter-spacing: .18em; white-space: nowrap; }
+.hero h1 { margin: 0 0 25px; color: #4a202a; font-size: clamp(62px, 5.1vw, 82px); line-height: 1.1; letter-spacing: -.055em; }
+.hero h1 span, .hero h1 em { display: block; }
+.hero h1 em { color: #ad717c; font-size: 1.08em; font-weight: 400; }
+.hero-title-rule { display: block; width: min(100%, 400px); height: 1px; margin-bottom: 31px; background: #dec6c3; }
+.hero-description { max-width: 450px; margin-bottom: 42px; color: #68595d; font-size: clamp(14px, 1.04vw, 16px); line-height: 1.7; }
+.hero-actions { display: flex; align-items: center; gap: 28px; }
+.hero-actions .button-primary { min-height: 58px; padding-inline: 24px; font-size: 13px; font-weight: 600; }
+.hero-secondary { display: inline-flex; align-items: center; justify-content: center; gap: 22px; min-height: 48px; color: var(--wine); font-size: 12px; font-weight: 600; white-space: nowrap; }
+.hero-secondary svg { width: 17px; height: 17px; transition: transform .18s ease; }
+.hero-secondary:hover svg { transform: translate(3px, -3px); }
+.hero-visual { position: absolute; inset: 0 0 0 39.5%; }
+.hero-photo-shell { position: absolute; inset: 0; display: block; overflow: hidden; }
+.hero-photo { object-fit: cover; object-position: center center; }
+.hero-photo-curve { position: absolute; z-index: 1; top: 0; bottom: 0; left: -1px; width: clamp(130px, 13.8vw, 200px); height: 100%; pointer-events: none; }
+.hero-curve-fill { fill: #fcf8f6; }
+.hero-curve-line { fill: none; stroke: #ca969c; stroke-width: 1.5; }
+.hero-mobile-wave { display: none; }
+.hero-doctor-label { position: absolute; z-index: 2; right: clamp(24px, 4.5vw, 80px); bottom: 30px; min-width: 245px; padding: 22px; color: var(--wine); background: #fcf8f6f2; font-size: 11px; font-weight: 600; letter-spacing: .15em; white-space: nowrap; }
+.hero-benefits { min-height: 66px; background: #fcf8f6; }
+.hero-benefits-inner { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: center; gap: 20px; width: calc(100% - var(--gutter) * 2); max-width: 1600px; min-height: inherit; margin-inline: auto; border-top: 1px solid #dec6c4; }
+.hero-benefits span { color: var(--wine); font-size: clamp(9px, .72vw, 11px); font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
 
 .clinic { position: relative; padding-block: clamp(48px, 4.2vw, 80px); background: #fcf8f6; }
 .anchor-offset { position: absolute; top: 0; }
@@ -145,33 +143,26 @@ html.has-reveal .service-card.is-visible:hover { transform: translateY(-4px); }
 .services-grid [data-reveal]:nth-child(2), .services-grid [data-reveal]:nth-child(5) { transition-delay: 55ms; }
 .services-grid [data-reveal]:nth-child(3), .services-grid [data-reveal]:nth-child(6) { transition-delay: 110ms; }
 
-@media (min-width: 1601px) {
-  .hero-copy { padding-left: clamp(72px, 8vw, 155px); }
-}
-
 @media (min-width: 1921px) {
-  .hero { background: radial-gradient(ellipse 40% 85% at 7% 84%, #ebc8c0 0%, #f5e8e3 62%, transparent 100%), linear-gradient(90deg, #f6e9e5 0%, #fcf8f6 26%, #f7eeea 64%, #d5a98d 100%); }
-  .hero::before { content: ''; position: absolute; top: -145px; left: max(16px, calc((100vw - 1920px) / 4 - 80px)); width: clamp(260px, 22vw, 530px); height: 780px; border: 1px solid #d5a49d66; border-radius: 50%; transform: rotate(-25deg); pointer-events: none; }
-  .hero::after { content: ''; position: absolute; right: 0; bottom: 0; width: calc((100vw - 1920px) / 2 + 55px); height: 100%; background: linear-gradient(0deg, #fcf8f6 0%, transparent 18%), linear-gradient(90deg, transparent 0, #d5a98d 55px, #d5a98d 100%); pointer-events: none; }
-  .hero-botanical { left: max(-92px, calc((100vw - 1920px) / 2 - 92px)); }
   .clinic { background: linear-gradient(90deg, #d49b98 0%, #efdad6 calc((100vw - 1920px) / 2), #fcf8f6 calc((100vw - 1920px) / 2 + 80px), #fcf8f6 100%); }
   .services { background: radial-gradient(ellipse 19% 100% at 0% 50%, #f6e9e6 0%, transparent 100%), radial-gradient(ellipse 18% 95% at 100% 50%, #f6ebe8 0%, transparent 100%), #fffdfb; }
+}
+
+@media (min-width: 1800px) {
+  .hero-visual { left: 44%; }
+  .hero-photo { object-position: center top; }
 }
 
 @media (max-width: 1250px) {
   .header-inner { gap: 15px; }
   .main-nav { gap: 15px; }
-  .hero-copy { padding-left: var(--gutter); }
-  .hero h1 { font-size: 65px; }
-  .hero-description { max-width: 345px; }
-  .hero-actions { gap: 8px; }
-  .hero-actions .button { padding-inline: 12px; gap: 7px; font-size: 9px; }
-  .hero-signature { right: 4%; width: 160px; }
-  .hero-doctor-label { right: 4%; font-size: 8px; }
-  .hero-doctor-label span { font-size: 7px; }
-  .benefits-row { max-width: 430px; gap: 10px; }
-  .benefit { gap: 7px; }
-  .benefit svg { width: 28px; height: 28px; }
+  .hero-copy { width: 54%; padding-left: var(--gutter); }
+  .hero h1 { font-size: clamp(56px, 5.1vw, 65px); }
+  .hero-description { max-width: 385px; }
+  .hero-actions { gap: 17px; }
+  .hero-actions .button-primary { padding-inline: 18px; font-size: 11px; }
+  .hero-secondary { gap: 8px; font-size: 10px; }
+  .hero-doctor-label { right: 24px; min-width: 0; padding: 15px; font-size: 9px; }
   .clinic-copy { padding-left: 7%; }
   .clinic-highlights { gap: 10px; }
   .clinic-highlights > div { font-size: 9px; gap: 7px; }
@@ -191,16 +182,17 @@ html.has-reveal .service-card.is-visible:hover { transform: translateY(-4px); }
   .main-nav > a { min-height: 48px; border: 0; font-size: 14px; }
   .main-nav .mobile-nav-cta { display: flex; justify-content: space-between; margin-top: 8px; color: var(--wine); }
   .mobile-nav-cta svg { width: 18px; height: 18px; }
-  .hero-grid { --hero-height: 500px; grid-template-columns: 48% 52%; min-height: var(--hero-height); }
-  .hero-copy { padding-left: var(--gutter); }
-  .hero-copy .eyebrow { max-width: 320px; font-size: 9px; white-space: normal; }
-  .hero h1 { font-size: clamp(52px, 6.6vw, 64px); }
-  .hero-description { font-size: 12px; max-width: 310px; }
-  .hero-actions { flex-wrap: wrap; gap: 8px; }
-  .hero-actions .button { min-height: 44px; padding-inline: 17px; }
-  .hero-signature, .hero-doctor-label { display: none; }
-  .benefits-row { margin-top: 20px; }
-  .benefit { flex-direction: column; align-items: flex-start; font-size: 9px; }
+  .hero-stage { min-height: 610px; }
+  .hero-copy { width: 56%; padding-top: 68px; }
+  .hero-copy .eyebrow { max-width: 310px; margin-bottom: 32px; font-size: 9px; white-space: normal; }
+  .hero h1 { font-size: clamp(50px, 6.1vw, 60px); }
+  .hero-title-rule { width: min(100%, 310px); }
+  .hero-description { max-width: 300px; margin-bottom: 22px; font-size: 12px; }
+  .hero-actions { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .hero-actions .button-primary { min-height: 49px; }
+  .hero-visual { left: 47%; }
+  .hero-doctor-label { display: none; }
+  .hero-benefits span { font-size: 9px; }
   .clinic-grid { grid-template-columns: 54% 46%; min-height: 365px; }
   .clinic-gallery { border-radius: 22px 85px 35px 22px; }
   .clinic-copy { padding: 25px 0 25px 7%; }
@@ -227,24 +219,25 @@ html.has-reveal .service-card.is-visible:hover { transform: translateY(-4px); }
   .brand-link { width: 168px; }
   .header-cta { display: none; }
   .main-nav { top: 70px; }
-  .hero-grid { --hero-height: 350px; display: flex; flex-direction: column-reverse; min-height: 0; }
-  .hero-botanical { display: none; }
-  .hero-visual { min-height: 350px; }
-  .hero-visual::before { inset: 0; border-radius: 0; background: var(--cream); }
-  .hero-photo-shell { inset: 0; border-radius: 0; clip-path: polygon(0 0, 100% 0, 100% 100%, 30% 89%, 0 75%); }
-  .hero-photo { object-position: center 42%; }
-  .hero-wave { display: none; }
-  .hero-copy { padding: 0 var(--gutter) 32px; }
-  .hero-copy .eyebrow { max-width: 270px; margin-bottom: 7px; font-size: 10px; line-height: 1.3; }
-  .hero h1 { margin-bottom: 16px; font-size: clamp(47px, 12.5vw, 66px); line-height: 1; }
-  .hero-description { max-width: 440px; padding-right: 0; margin-bottom: 21px; font-size: 13px; line-height: 1.45; }
-  .hero-actions { display: block; }
-  .hero-actions .button-primary { min-height: 47px; width: min(100%, 340px); gap: 12px; padding-inline: 21px; font-size: 11px; }
-  .hero-secondary { display: none; }
-  .benefits-row { justify-content: space-between; gap: 10px; max-width: 390px; padding: 0; margin-top: 27px; }
-  .benefit { gap: 8px; width: 30%; font-size: 10px; text-align: center; align-items: center; }
-  .benefit svg { width: 30px; height: 30px; }
-  .benefit span { max-width: 100px; }
+  .hero-stage { display: flex; flex-direction: column-reverse; min-height: 0; overflow: visible; }
+  .hero-visual { position: relative; inset: auto; width: 100%; height: clamp(290px, 82vw, 370px); flex: none; }
+  .hero-photo { object-position: center top; }
+  .hero-photo-curve { display: none; }
+  .hero-mobile-wave { position: absolute; z-index: 1; right: 0; bottom: -1px; left: 0; display: block; width: 100%; height: 55px; pointer-events: none; }
+  .hero-wave-fill { fill: #fcf8f6; }
+  .hero-wave-line { fill: none; stroke: #ca969c; stroke-width: 1.4; }
+  .hero-copy { width: 100%; min-height: 0; padding: 24px var(--gutter) 28px; }
+  .hero-copy .eyebrow { max-width: 100%; margin-bottom: 20px; font-size: 9px; line-height: 1.4; }
+  .hero h1 { margin-bottom: 17px; font-size: clamp(43px, 11.4vw, 54px); line-height: 1.09; }
+  .hero-title-rule { width: 145px; margin-bottom: 22px; }
+  .hero-description { max-width: 420px; margin-bottom: 28px; font-size: 12.5px; line-height: 1.7; }
+  .hero-actions { flex-direction: column; align-items: flex-start; gap: 24px; }
+  .hero-actions .button-primary { width: min(100%, 285px); min-height: 52px; padding-inline: 21px; font-size: 12px; }
+  .hero-secondary { min-height: 44px; font-size: 11px; }
+  .hero-benefits { min-height: 49px; }
+  .hero-benefits-inner { display: flex; min-height: 49px; }
+  .hero-benefits span { font-size: 9px; }
+  .hero-benefits span:not(:first-child) { display: none; }
   .clinic { padding-block: 44px 48px; }
   .clinic-grid { display: flex; flex-direction: column; min-height: 0; }
   .clinic-gallery { min-height: 270px; border-radius: 20px 65px 25px 20px; }
@@ -276,12 +269,6 @@ html.has-reveal .service-card.is-visible:hover { transform: translateY(-4px); }
   .footer-main nav a { font-size: 11px; }
   .footer-location { font-size: 11px; }
   .footer-bottom { flex-direction: column; align-items: flex-start; padding-block: 12px; }
-}
-
-@media (min-width: 500px) and (max-width: 700px) {
-  .hero-grid { --hero-height: 430px; }
-  .hero-visual { min-height: 430px; }
-  .hero-copy { padding-top: 15px; }
 }
 
 .doctor-section { padding-block: clamp(64px, 5vw, 96px); background: radial-gradient(ellipse at 4% 100%, #f4e6e1, transparent 39%), #fcf8f6; }

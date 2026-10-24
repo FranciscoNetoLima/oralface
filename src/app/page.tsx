@@ -1,48 +1,42 @@
 import Image from 'next/image';
 import content from '@/design-system/site-content.json';
 import { ArrowIcon } from '@/components/ArrowIcon';
-import { BotanicalAccent } from '@/components/BotanicalAccent';
-import { BrandIcon, type BrandIconName } from '@/components/BrandIcon';
+import { BrandIcon } from '@/components/BrandIcon';
 import { EvaluationForm } from '@/components/EvaluationForm';
 import { SiteHeader } from '@/components/SiteHeader';
 import { ScrollReveal } from '@/components/ScrollReveal';
 
 const portrait = '/images/hero/dra-tallita-hero-master.webp';
 const facade = '/images/clinic/fachada-real-oralface.webp';
-const benefits: { label: string; icon: BrandIconName }[] = [
-  { label: 'Atendimento humanizado', icon: 'diamond' },
-  { label: 'Ambiente acolhedor', icon: 'shield' },
-  { label: 'Cuidado personalizado', icon: 'people' }
-];
-
 export default function Home() {
   return <div className="site-frame">
     <a className="skip-link" href="#conteudo">Ir para o conteúdo</a>
     <SiteHeader />
     <ScrollReveal />
     <main id="conteudo">
-      <section className="hero" id="inicio" aria-labelledby="hero-title">
-        <BotanicalAccent className="hero-botanical" />
-        <div className="hero-grid">
+      <section className="hero hero-editorial" id="inicio" aria-labelledby="hero-title">
+        <div className="hero-stage">
           <div className="hero-copy" data-reveal>
-            <p className="eyebrow">{content.hero.eyebrow}</p>
-            <h1 id="hero-title"><span>Sorrisos que </span><span>transformam </span><span>histórias</span></h1>
+            <p className="eyebrow">ORAL FACE / {content.hero.eyebrow}</p>
+            <h1 id="hero-title"><span>Sorrisos que</span><span>transformam</span><em>histórias.</em></h1>
+            <span className="hero-title-rule" aria-hidden="true" />
             <p className="hero-description">{content.hero.body}</p>
             <div className="hero-actions">
-              <a className="button button-primary" href="#contato"><BrandIcon name="calendar" />Agendar minha consulta<ArrowIcon /></a>
-              <a className="button button-outline hero-secondary" href="#tratamentos">Conhecer os tratamentos<ArrowIcon /></a>
-            </div>
-            <div className="benefits-row" aria-label="Diferenciais da Oral Face">
-              {benefits.map((benefit) => <div className="benefit" key={benefit.icon}><BrandIcon name={benefit.icon} /><span>{benefit.label}</span></div>)}
+              <a className="button button-primary" href="#contato">Agendar minha consulta<ArrowIcon /></a>
+              <a className="hero-secondary" href="#tratamentos">Conhecer os tratamentos<ArrowIcon /></a>
             </div>
           </div>
           <div className="hero-visual" data-reveal>
-            <div className="hero-photo-shell"><Image src={portrait} alt="Dra. Tallita Andrade no consultório da Oral Face" fill priority sizes="(max-width: 700px) 100vw, (max-width: 1000px) 52vw, 55vw" className="hero-photo" /></div>
-            <div className="hero-signature" aria-hidden="true"><span>Saúde, estética<br />e bem-estar para<br />sorrisos reais.</span><i /></div>
-            <div className="hero-doctor-label"><strong>DRA. TALLITA ANDRADE</strong><span>CIRURGIÃ-DENTISTA</span></div>
-            <svg className="hero-wave" viewBox="0 0 900 100" preserveAspectRatio="none" aria-hidden="true"><path d="M0 86Q430 144 900 28V100H0Z" /></svg>
+            <picture className="hero-photo-shell">
+              <source media="(max-width: 700px)" srcSet="/images/hero/dra-tallita-hero-mobile.webp" type="image/webp" />
+              <Image src={portrait} alt="Dra. Tallita Andrade no consultório odontológico" fill loading="eager" fetchPriority="high" sizes="(max-width: 700px) 100vw, (max-width: 1000px) 52vw, 60vw" className="hero-photo" />
+            </picture>
+            <svg className="hero-photo-curve" viewBox="0 0 200 720" preserveAspectRatio="none" aria-hidden="true"><path d="M0 0H64C21 88-8 205 24 317C62 446 87 573 13 720H0Z" className="hero-curve-fill" /><path d="M64 0C21 88-8 205 24 317C62 446 87 573 13 720" className="hero-curve-line" /></svg>
+            <svg className="hero-mobile-wave" viewBox="0 0 390 55" preserveAspectRatio="none" aria-hidden="true"><path d="M0 26C102 62 288 62 390 26V55H0Z" className="hero-wave-fill" /><path d="M0 26C102 62 288 62 390 26" className="hero-wave-line" /></svg>
+            <span className="hero-doctor-label">DRA. TALLITA ANDRADE</span>
           </div>
         </div>
+        <div className="hero-benefits" aria-label="Diferenciais da Oral Face"><div className="hero-benefits-inner">{content.benefits.map((benefit) => <span key={benefit}>{benefit}</span>)}</div></div>
       </section>
 
       <section className="clinic-combined" id="sobre" aria-labelledby="clinic-title">
