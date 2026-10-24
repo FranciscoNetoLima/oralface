@@ -8,6 +8,7 @@ import { ScrollReveal } from '@/components/ScrollReveal';
 
 const portrait = content.hero.imageDesktop;
 const facade = content.clinic.image;
+const clinicMapUrl = 'https://www.google.com/maps/search/?api=1&query=Oral+Face+Odontologia+Juazeiro+do+Norte+CE';
 export default function Home() {
   return <div className="site-frame">
     <a className="skip-link" href="#conteudo">Ir para o conteúdo</a>
@@ -46,7 +47,7 @@ export default function Home() {
               <p className="section-index"><span>01</span><i />NOSSA CLÍNICA</p>
               <h2 id="clinic-title">Um espaço que<br />acolhe antes<br />da primeira palavra.</h2>
               <p className="clinic-combined-description">{content.clinic.body}</p>
-              <a href="#estrutura" className="button combined-button-light">Conhecer nossa estrutura<ArrowIcon /></a>
+              <a href={clinicMapUrl} className="button combined-button-light" target="_blank" rel="noopener noreferrer">Conhecer nossa estrutura<ArrowIcon /></a>
             </div>
             <figure className="clinic-combined-figure" id="estrutura" data-reveal>
               <div className="clinic-combined-photo"><Image src={facade} alt="Fachada real da Oral Face Odontologia em Juazeiro do Norte" fill unoptimized sizes="(max-width: 700px) 100vw, (max-width: 1100px) 52vw, 48vw" /></div>
@@ -123,12 +124,11 @@ export default function Home() {
         <div className="footer-location">
           <h3>Onde estamos</h3>
           <p><BrandIcon name="pin" />Juazeiro do Norte · CE</p>
-          <a href="#sobre">Conheça a clínica <ArrowIcon diagonal /></a>
+          <a href={clinicMapUrl} target="_blank" rel="noopener noreferrer">Ver localização no mapa <ArrowIcon diagonal /></a>
         </div>
       </div>
       <div className="container footer-bottom">
         <span>© {new Date().getFullYear()} Oral Face Odontologia</span>
-        <a href="#inicio">Voltar ao início ↑</a>
         <span>Desenvolvido por <a href="https://amplium.pro/#inicio" target="_blank" rel="noopener noreferrer">Francisco Neto | Amplium</a></span>
       </div>
     </footer>
